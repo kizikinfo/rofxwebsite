@@ -1,0 +1,165 @@
+extends layout
+
+block content
+    nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse.fixed-top
+     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#myNavbar')
+       span.navbar-toggler-icon
+     #myNavbar.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.active.nav-item
+          a.nav-link(href='#main') #{data.nav1[lc]}
+        li.nav-item
+          a.nav-link(href='#about') #{data.nav2[lc]}
+        li.nav-item
+          a.nav-link(href='#advantage') #{data.nav3[lc]}
+        li.nav-item
+          a.nav-link(href='#review') #{data.nav4[lc]}
+        li.nav-item
+          a.nav-link(href='#price') #{data.nav5[lc]} 
+    #main
+      .container
+        .row
+          .col-md-12
+            p#maintext.text-center #{data.main2[lc]}
+    #aboutwrapper
+     #about.container
+       .row
+         .col-md-12
+           h1.text-center #{data.nav2[lc]}
+       .row
+         .col-md-12
+          #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+           .row
+            .col-md-6.offset-md-3
+             .carousel-inner
+              .carousel-item.active 
+               img.d-block.w-100(src='img/1a.png', alt='First slide')
+               .carousel-caption
+                p Внесение депозита на 3042 долларов
+              .carousel-item
+               img.d-block.w-100(src='img/2a.png', alt='Second slide')
+               .carousel-caption
+                p Накопленная прибыль за 40 дней
+              .carousel-item
+               img.d-block.w-100(src='img/3a.png', alt='Third slide')
+               .carousel-caption
+                p В истории указаны ежедневные прибыли и запрос на вывод накопленной прибыли (127 долларов)
+              .carousel-item
+               img.d-block.w-100(src='img/4a.png', alt='Second slide')
+               .carousel-caption
+                p Прибыль за 1 день после вывода 127 долларов
+              .carousel-item
+               img.d-block.w-100(src='img/6a.png', alt='Second slide')
+               .carousel-caption
+                p Вывод первоначального депозита с заного накопленной прибылью
+              .carousel-item
+               img.d-block.w-100(src='img/7a.png', alt='Second slide')
+               .carousel-caption
+                p SMS оповещение еженедельной и ежемесячной прибыли
+              .carousel-item
+               img.d-block.w-100(src='img/8a.png', alt='Second slide')
+               .carousel-caption
+                p SMS оповещение поступления 127 долларов на карточку и 3052.23 долларов на счет
+              .carousel-item
+               img.d-block.w-100(src='img/9a.png', alt='Second slide')
+               .carousel-caption
+                p Скрин счета с интернет банкинга
+             .new-caption-area.text-center
+           a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+           a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+
+    #advantage
+      .container
+        .row
+          .col-md-12
+            h1.text-center #{data.nav3[lc]}
+        .row
+          .col-md-4.text-center.advantage_col_md_2
+            img.img-circle(src='img/xxx.png')
+            .row
+              .col-md-12
+                p.p_advantage.p_exclusive #{data.advantage1[lc]}
+          .col-md-4.text-center.advantage_col_md_2
+            img.img-circle(src='img/yyy.png')
+            .row
+              .col-md-12
+                p.p_advantage #{data.advantage2[lc]}
+          .col-md-4.text-center.advantage_col_md_2
+            img.img-circle(src='img/qqq.jpg')
+            .row
+              .col-md-12
+                p.p_advantage #{data.advantage3[lc]}
+        .row
+          .col-md-4.text-center.advantage_col_md_2
+            img.img-circle(src='img/www.jpg')
+            .row
+              .col-md-12
+                p.p_advantage #{data.advantage4[lc]}
+          .col-md-4.text-center.advantage_col_md_2
+            img.img-circle(src='img/eee.jpg')
+            .row
+              .col-md-12
+                p.p_advantage #{data.advantage5[lc]}
+          .col-md-4.text-center.advantage_col_md_2
+            img.img-circle(src='img/uuu.jpg')
+            .row
+              .col-md-12
+                p.p_advantage #{data.advantage6[lc]}
+
+    #review.container
+      h1.text-center #{data.nav4[lc]}
+      .row
+       .col-md-12
+        h3.registering Даже без размещения депозита, просто зарегистрировавшись Вы будете получать уведомление об ежедневной прибыли на почту. Регистрация БЕСПЛАТНАЯ. Убедитесь в правильности номера телефона так как будет SMS верификация.
+        p.text-center
+         button.btn.btn-info.btn-lg(type="button", data-toggle="modal", data-target="#myModal") Войти или зарегистрироваться
+        #myModal.modal.fade(role='dialog')
+         .modal-dialog
+          .modal-content
+           .modal-header
+            h5.modal-title Вы уже зарегистрирваны в RoFx?
+            button.close(type='button', data-dismiss='modal') ×
+           .modal-footer
+             button.btn.btn-default(type='button', onclick='loginToRofx()') Да
+             button.btn.btn-default(type='button', onclick='registerToRofx()') Нет
+
+    #price
+      .container
+        h1.text-center #{data.nav5[lc]}
+        .row
+         .col-md-12
+          h3.registering Вся информация на сайте RoFx на английском. По вопросам о программе, личном опыте, консультации, сопровождении можете связаться со мной по кнопке ниже.		
+          p.text-center
+           button.btn.btn-info.btn-lg(type='button', data-toggle="modal", data-target="#contactmodal") Связаться
+           #contactmodal.modal.fade(role='dialog')
+            .modal-dialog
+               .modal-content
+                .modal-header
+                 h5.modal-title Выберите способ связи
+                 button.close(type='button', data-dismiss='modal') ×
+                .custom-modal-div
+                 p.text-center
+                   a.modal-insta-link(href='https://www.instagram.com/bektaz.tk/')
+                    img(src='img/instagram2.png')
+                   button.btn.btn-info(type='button', onclick='openContactForm()') Форма связи
+    button.btn.btn-primary.btn-lg.a_investor(type='button', data-toggle="modal", data-target="#contactmodal1") #{data.investor[lc]}
+    #contactmodal1.modal.fade(role='dialog')
+     .modal-dialog
+      .modal-content
+       .modal-header
+        h5.modal-title Выберите способ связи
+        button.close(type='button', data-dismiss='modal') ×
+       .custom-modal-div
+        p.text-center
+         a.modal-insta-link(href='https://www.instagram.com/bektaz.tk/')
+          img(src='img/instagram2.png')
+         button.btn.btn-info(type='button', onclick='openContactForm()') Форма связи
+    .footer
+      .row
+        .col-md-12
+          p.p_footer2.text-center © 2017 Monitr #{data.footer[lc]}
+    script(type='text/javascript', src='index.js')
