@@ -1,4 +1,4 @@
-heroku app name: monitrapp
-pingometer login: olx1000020@mail.ru
-heroku login: olx1000018@mail.ru
+heroku app name: rofxwebsite
+pingometer login: olx1000020@mail.ru (kazr rofxwebsite tur)
+heroku login: olx1000019@mail.ru (kazr rofxwebsite tur)
 heroku password: locally stored
